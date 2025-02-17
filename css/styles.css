@@ -1,0 +1,177 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+
+/* Header styles */
+header {
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #fff;
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+
+.profile-image-container {
+    flex: 0 0 40%;
+    max-width: 400px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+    padding-top: 2rem;
+}
+
+.designer-name {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-content h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-align: left;
+}
+
+.quote {
+    font-style: italic;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+cite {
+    color: #4CAF50;
+    font-style: normal;
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* Projects section */
+#projects {
+    margin-top: 4rem;
+}
+
+#projects h2 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    background: #111;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.project-info p {
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .profile-image-container {
+        max-width: 100%;
+    }
+
+    .about-content {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 6rem;
+    }
+    
+    .profile-section {
+        padding: 0 4rem;
+    }
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Section headers */
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
