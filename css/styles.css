@@ -5,173 +5,170 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-background: rgb(15, 14, 14);
+    --color-accent: rgb(94, 204, 153);
+    --color-divider: rgb(177, 215, 197);
+    --color-text: rgb(255, 255, 255);
+    --max-width: 1232px;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Epilogue', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
     line-height: 1.6;
-    background-color: #000;
-    color: #fff;
-    padding: 2rem;
 }
 
-/* Header styles */
-header {
-    padding: 2rem 0;
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Logo Section */
+.logo-section {
+    padding: 80px 0 8px;
+}
+
+.logo {
     text-align: center;
-    margin-bottom: 4rem;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: normal;
-    line-height: 1.2;
-    color: #fff;
+.logo img {
+    width: 7%;
+    height: auto;
 }
 
-/* Profile section */
+/* Profile Section */
 .profile-section {
-    display: flex;
-    gap: 4rem;
-    align-items: flex-start;
-    margin-bottom: 4rem;
-    padding: 0 2rem;
+    margin-top: 50px;
+    padding: 8px 0;
 }
 
-.profile-image-container {
-    flex: 0 0 40%;
-    max-width: 400px;
+.profile-grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .profile-image {
-    width: 100%;
+    flex: 0 0 50%;
+}
+
+.profile-image img {
+    width: 64%;
     height: auto;
     display: block;
 }
 
-.about-content {
-    flex: 1;
-    padding-top: 2rem;
+.profile-content {
+    flex: 0 0 50%;
+    padding-top: 20px;
 }
 
 .designer-name {
-    color: #4CAF50;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 
-.about-content h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.profile-content h1 {
+    color: var(--color-text);
+    margin: 10px 0;
     font-weight: normal;
-    text-align: left;
 }
 
 .quote {
-    font-style: italic;
-    color: #fff;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    margin-top: 10px;
 }
 
-cite {
-    color: #4CAF50;
-    font-style: normal;
-    display: block;
+.quote p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.quote-author {
     text-align: right;
-    margin-top: 1rem;
+    color: var(--color-accent);
 }
 
-/* Projects section */
-#projects {
-    margin-top: 4rem;
+/* Projects Section */
+.projects-section {
+    margin-top: 80px;
+    padding: 8px 0;
 }
 
-#projects h2 {
-    color: #4CAF50;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: normal;
-}
-
-.project-grid {
+.section-header {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 30px;
 }
 
-.project-card {
-    background: #111;
-    border: 1px solid #333;
-    overflow: hidden;
+.title-col {
+    flex: 0 0 20%;
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    display: block;
+.divider-col {
+    flex: 0 0 80%;
 }
 
-.project-info {
-    padding: 2rem;
-}
-
-.project-info h3 {
-    color: #fff;
-    margin-bottom: 1rem;
+.section-title {
+    color: var(--color-accent);
+    font-size: 72px;
     font-weight: normal;
 }
 
-.project-info p {
-    color: #999;
-    margin-bottom: 1rem;
+.divider {
+    height: 1px;
+    background-color: var(--color-divider);
+    margin-top: 40px;
 }
 
-.project-description {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .profile-section {
+    .profile-grid {
         flex-direction: column;
-        gap: 2rem;
-        padding: 0;
     }
 
-    .profile-image-container {
-        max-width: 100%;
+    .profile-image, .profile-content {
+        flex: 0 0 100%;
     }
 
-    .about-content {
-        padding-top: 0;
+    .profile-image img {
+        width: 100%;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title-col, .divider-col {
+        flex: 0 0 100%;
+    }
+
+    .section-title {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 20%;
     }
 }
 
-@media (min-width: 1024px) {
-    body {
-        padding: 6rem;
-    }
-    
-    .profile-section {
-        padding: 0 4rem;
+/* Hide elements for mobile/desktop as needed */
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none;
     }
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Section headers */
-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #333;
+@media (min-width: 768px) {
+    .hidden-md {
+        display: none;
+    }
 }
